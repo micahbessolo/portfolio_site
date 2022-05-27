@@ -1,0 +1,15 @@
+.content {
+  height: calc(100vh - 98px);
+  margin: 16px;
+  margin-left: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  // background-image: url("https://i.imgur.com/VSjNm16.jpg");
+  background-attachment: fixed;
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
