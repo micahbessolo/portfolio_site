@@ -1,0 +1,30 @@
+<div class="content mat-elevation-z4">
+  <div class="contactForm">
+    <form id="form" method="POST" action="/post-feedback">
+      <h2>Contact Me</h2>
+      <div class="inputBox form-group">
+        <input #nameInput class="form-control" type="text" name="name" id="name"
+         placeholder=" Full Name" required ngModel>
+      </div>
+      <div class="inputBox form-group">
+        <input #emailInput class="form-control" type="email" name="email" id="email"
+         placeholder=" Email" required ngModel>
+      </div>
+      <div class="inputBox form-group">
+        <textarea #messageInput class="form-control" type="text" name="message"
+        placeholder=" Type your message..." required></textarea>
+      </div>
+      <div class="inputBox form-group">
+        <input class="round btn" type="submit" name="" id ="submit" value="Submit"
+        (click)="validate(nameInput.value, emailInput.value, messageInput.value)">
+      </div>
+    </form>
+      <a href="https://github.com/micahbessolo">
+        <i class="fa fa-github" style="font-size:36px"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/micah-bessolo-721887b6/">
+        <i class="fa fa-linkedin-square" style="font-size:36px"></i>
+      </a>
+  </div>
+</div>
+
