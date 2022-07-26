@@ -31,32 +31,16 @@ clickedButton(num: number) {
   }
 };
 
-accordionButton(num: number) {
-  const btnArray = [document.getElementById("backend"), document.getElementById("frontend")]
-  const collapseArray = [document.getElementById("backendCollapse"), document.getElementById("frontendCollapse")];
+accordionButton() {
+  const backBtn = document.getElementById("backend");
+  const frontBtn = document.getElementById("frontend");
+  const backendCollapse = document.getElementById("backendCollapse");
+  const frontCollapse = document.getElementById("frontendCollapse");
 
-  let clickedButton = btnArray[num];
-  let clickedCollapse = collapseArray[num];
-
-  const notNum = Math.abs(num - 1);
-
-  for (let i = 0; i < btnArray.length; i++) {
-    if (i !== num && collapseArray[i]?.classList.contains('show')){
-      collapseArray[i]?.classList.remove('show');
-      btnArray[i]?.classList.add('collapsed');
-    };
-  }
-
-  if (clickedCollapse?.classList.contains('show')){
-    clickedButton?.classList.add('collapsed')
-    clickedCollapse?.classList.remove('show')
-    btnArray[notNum]?.classList.remove('collapse')
-    collapseArray[notNum]?.classList.add('show')
-  }
-  else {
-    clickedCollapse?.classList.add('show')
-    clickedButton?.classList.remove('collapsed')
-  };
+  backBtn?.classList.toggle("collapsed");
+  frontBtn?.classList.toggle("collapsed");
+  backendCollapse?.classList.toggle("show");
+  frontCollapse?.classList.toggle("show");
 };
 
 }
