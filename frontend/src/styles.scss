@@ -1,5 +1,7 @@
+@import "vars";
+
 .green {
-  background: #013f28;
+  background: $dark-color;
 }
 
 body {
@@ -9,4 +11,3 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   overflow-y: hidden;
 }
-

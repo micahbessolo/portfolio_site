@@ -1,7 +1,4 @@
-.background {
-  // background: orange;
-}
-
+@import "../../vars.scss";
 
 //navbar
 .navbar-active {
@@ -13,7 +10,7 @@
 }
 
 .bg-custom {
-  background-color: #013f28;
+  background-color: $dark-color;
 }
 
 .nav-link {
@@ -40,7 +37,6 @@
 
 .mb {
   background-color: lightgray;
-  // background: white;
   border-radius: 5px;
   font-weight: 400;
   height: 34px;
@@ -55,14 +51,8 @@
 
 .navbar-nav {
   position: absolute;
-  height:34px;
-  left:100px;
-}
-
-@media only screen and (min-width: 801px) {
-  .navbar-nav {
-    // display: none
-  }
+  height:c34px;
+  left:c100px;
 }
 
 // sidebar
@@ -70,7 +60,7 @@
   margin: 16px;
   width: 255px;
   border-right: none;
-  background: #90a58a;
+  background: $menu-color;
   color: white;
   border-radius: 10px;
   padding-top: 30px;
@@ -91,7 +81,6 @@
   text-align: center;
   margin: 20px 0;
   font-family: 'Poppins', sans-serif;
-  font-weight: bold;
   color: #000000;
 }
 
@@ -101,17 +90,12 @@
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   color: #ffffff;
-  background: #013f28;
+  background: $dark-color;
   padding: 20px;
-  font-weight: bold;
 }
 
 .sidebar {
   text-align: center;
-}
-
-.shapes {
-  background: red;
 }
 
 .sidebar ul {
@@ -121,10 +105,8 @@
 
 .sidebar ul li {
   font-size: 20px;
-  font-weight: bold;
   font-family: 'Poppins', sans-serif;
   list-style-type: none;
-  // padding-bottom: 20px;
   margin: 50px 0;
 }
 
@@ -149,7 +131,7 @@
 .sidebar ul li a:hover{
   margin-left: 5px;
   transition: .4s;
-  color: #013f28;
+  color: $dark-color;
 }
 
 // sidebar active
@@ -164,14 +146,13 @@
 
 // sidebar open button
 mat-toolbar {
-  background: #013f28;
-  // background: white;
+  background: $dark-color;
   min-height: 3px;
   margin-top: -25px;
   margin-bottom: -15px;
 }
 
-// removes sidebar open button for small phones
+// removes sidebar open button for small screens/phones
 @media only screen and (max-width: 361px) {
   mat-toolbar button {
     display: none;
@@ -218,7 +199,7 @@ button {
   position: relative;
   height: 60px;
   width: 60px;
-  background: #013f28;
+  background: $dark-color;
   border-radius: 10px;
   z-index: 2;
   box-shadow: 0 10px 10px rgba(0,0,0,0.1);
@@ -226,9 +207,7 @@ button {
 
 .wrapper .icon span i{
   font-size: 25px;
-  line-height: 60px;
-  // background: white;
-}
+  line-height: 60px;}
 
 .wrapper .icon .tooltip{
   position: absolute;

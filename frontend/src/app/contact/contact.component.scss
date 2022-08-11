@@ -1,3 +1,5 @@
+@import "../../vars.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +7,7 @@
   font-family: 'Poppins', sans-serif;
   background: #c4c7be;
   background: #daded3;
+  overflow-y: hidden;
 }
 
 h2 {
@@ -25,7 +28,6 @@ h2 {
   align-items: center;
   border-radius: 10px;
   background-attachment: fixed;
-  // background-color: #cccccc;
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
