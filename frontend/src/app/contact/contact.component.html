@@ -1,6 +1,7 @@
 <div class="content mat-elevation-z4">
   <div class="contactForm">
-    <form id="form" method="POST" action="/post-feedback">
+    <!-- action="/post-feedback" -->
+    <form id="form" action="https://formsubmit.co/bessolomicah@gmail.com" method="POST">
       <h2>Contact Me</h2>
       <div class="inputBox form-group">
         <input #nameInput class="form-control" type="text" name="name" id="name"
@@ -15,7 +16,7 @@
         placeholder=" Type your message..." required></textarea>
       </div>
       <div class="inputBox form-group">
-        <input class="round btn" type="submit" name="" id ="submit" value="Submit"
+        <input class="round btn" type="submit button" name="button" id ="submit" value="Submit"
         (click)="validate(nameInput.value, emailInput.value, messageInput.value)">
       </div>
     </form>
@@ -26,5 +27,4 @@
         <i class="fa fa-linkedin-square" style="font-size:36px"></i>
       </a>
   </div>
-</div>
-
+</div> l                                                                       

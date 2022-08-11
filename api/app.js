@@ -5,6 +5,12 @@ const {mongoose} = require('./db/mongoose');
 
 const bodyParser = require('body-parser');
 
+//this is to process environmental variables
+//config gets info from .env
+require('dotenv').config();
+
+const port = process.env.PORT || '3010';
+
 // Load middleware
 app.use(bodyParser.json());
 
@@ -20,7 +26,7 @@ const { Feed } = require('./db/models/feed.model');
 
 // GET /feeds
 app.get('/feeds', (req, res) => {
-  // we want to return an array with all the feeds
+  // return an array with all the feeds
   Feed.find({}).then((feeds) => {
     res.send(feeds);
   });
@@ -28,8 +34,8 @@ app.get('/feeds', (req, res) => {
 
 // POST /feeds
 app.post('/feeds', (req, res) => {
-  // we want to create a new feed and return the new feed back to user
-  // The feed info (fields) will be passed in via the JSON request body
+  // to create a new feed and return it back to user
+  // The feed info will be passed in via the JSON request body
   let name = req.body.name;
   let email = req.body.email;
   let message = req.body.message;
@@ -45,7 +51,7 @@ app.post('/feeds', (req, res) => {
 
 // DELETE /feeds/:id
 app.delete('/feeds/:id', (req, res) => {
-  // we want to  delete the specified feed (document with id in the URL)
+  // to delete the specified feed (document with id in the URL)
   Feed.findOneAndRemove({
     _id: req.params.id
   }).then((removedListDoc) => {
@@ -53,6 +59,6 @@ app.delete('/feeds/:id', (req, res) => {
   })
 });
 
-app.listen(3010, () => {
-  console.log("Server is listening on port 3010");
+app.listen(port, () => {
+  console.log("Server is listening on port " + port);
 })
