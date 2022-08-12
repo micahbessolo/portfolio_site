@@ -1,3 +1,5 @@
+@import "../../vars.scss";
+
 .content {
   height: calc(100vh - 98px);
   margin: 16px;
@@ -10,10 +12,10 @@
   text-align: left;
   background: linear-gradient(
     to right,
-    lightgray 0%,
-    lightgray 65%,
-    #8a90a5 65%,
-    #8a90a5 100%
+    $skill-left 0%,
+    $skill-left 65%,
+    $skill-right 65%,
+    $skill-right 100%
   )
 }
 

@@ -5,8 +5,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  background: #c4c7be;
-  background: #daded3;
+
+  background: $contact-background;
   overflow-y: hidden;
 }
 
@@ -14,9 +14,7 @@ h2 {
   font-size: 30px;
   font-weight: 350;
   color: #fff;
-  background: #013f28;
-  background: #266150;
-  background: #276050;
+  background: $contact-box;
 }
 
 .content {
