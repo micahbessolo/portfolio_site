@@ -9,6 +9,7 @@ const bodyParser = require('body-parser');
 //config gets info from .env
 require('dotenv').config();
 
+// 
 const port = process.env.PORT || '3010';
 
 // Load middleware
@@ -16,7 +17,8 @@ app.use(bodyParser.json());
 
 // Cors Header Middleware
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+  // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
@@ -26,7 +28,7 @@ const { Feed } = require('./db/models/feed.model');
 
 // GET /feeds
 app.get('/feeds', (req, res) => {
-  // return an array with all the feeds
+  // return all the feeds
   Feed.find({}).then((feeds) => {
     res.send(feeds);
   });
@@ -34,7 +36,7 @@ app.get('/feeds', (req, res) => {
 
 // POST /feeds
 app.post('/feeds', (req, res) => {
-  // to create a new feed and return it back to user
+  // to create a new feed with contact information
   // The feed info will be passed in via the JSON request body
   let name = req.body.name;
   let email = req.body.email;
@@ -44,7 +46,7 @@ app.post('/feeds', (req, res) => {
     name, email, message
   });
   newFeed.save().then((listDoc) => {
-    // the feed document is returned incl. id
+    // the feed document is returned including id
     res.send(listDoc);
   })
 });
