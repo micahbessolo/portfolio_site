@@ -1,21 +1,23 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
+const bodyParser = require('body-parser');
 
 const {mongoose} = require('./db/mongoose');
 
-const bodyParser = require('body-parser');
-
-//this is to process environmental variables
-//config gets info from .env
+// this is to process environmental variables
+// config gets info from .env
 require('dotenv').config();
 
-// 
+// this might be kinda extra...
 const port = process.env.PORT || '3010';
 
 // Load middleware
 app.use(bodyParser.json());
 
 // Cors Header Middleware
+app.use(cors());
+
 app.use(function(req, res, next) {
   // update to match the domain you will make the request from
   res.header("Access-Control-Allow-Origin", "*");
