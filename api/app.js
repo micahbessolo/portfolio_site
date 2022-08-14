@@ -63,6 +63,6 @@ app.delete('/feeds/:id', (req, res) => {
   })
 });
 
-app.listen(port, () => {
+app.listen(port, '44.227.132.21', () => {
   console.log("Server is listening on port " + port);
 })
