@@ -17,6 +17,7 @@
     $skill-right 65%,
     $skill-right 100%
   )
+
 }
 
 @media only screen and (max-width: 800px) {
@@ -31,6 +32,10 @@
   grid-gap: 4px;
   padding-right: 30px;
   padding-left: 30px;
+  position: relative;
+  max-height: calc(100vh - 98px);
+  // overflow-y: scroll;
+  // background: red;
 }
 
 .title {
@@ -43,17 +48,20 @@
 .left {
   position: relative;
   padding-top: 18px;
+  padding-left: 9px;
   padding-right: 10px;
+  overflow-y: auto;
+  max-height: calc(100vh - 150px);
   font-size: 17px;
+  line-height: 1.40;
   font-family: 'Poppins', sans-serif;
 }
 
 .right {
   position: absolute;
-  left: 66%;
+  left: calc(66% + 20px);
   font-size: 17px;
-  padding-top: 1px;
-  // padding-top: 40%;
+  line-height: 1.4;
   margin-top: 0;
   font-family: 'Poppins', sans-serif;
 }

@@ -12,7 +12,7 @@ export class FeedService {
   constructor(private webReqService: WebRequestService) { }
 
   createFeed(name: string, email: string, message: string) {
-    // we want to send a web request to create a feed
+    // to send a web request to create a feed
     return this.webReqService.post('feeds', { name, email, message });
   }
 }

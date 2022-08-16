@@ -5,32 +5,30 @@ const bodyParser = require('body-parser');
 
 const {mongoose} = require('./db/mongoose');
 
-// this is to process environmental variables
-// config gets info from .env
+// to process environmental variables; config gets info from .env
 require('dotenv').config();
 
-// this might be kinda extra...
-const port = process.env.PORT || '3010';
+const port = '3010';
 
-// Load middleware
+// Loads middleware
 app.use(bodyParser.json());
 
 // Cors Header Middleware
 app.use(cors());
 
 app.use(function(req, res, next) {
-  // update to match the domain you will make the request from
+  // updates to match the domain you make the request from
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
 
-// Load in the mongoose models/schemas
+// Loads in the mongoose models/schemas
 const { Feed } = require('./db/models/feed.model');
 
 // GET /feeds
 app.get('/feeds', (req, res) => {
-  // return all the feeds
+  // returns all the feeds
   Feed.find({}).then((feeds) => {
     res.send(feeds);
   });
@@ -63,6 +61,6 @@ app.delete('/feeds/:id', (req, res) => {
   })
 });
 
-app.listen(port, '44.227.132.21', () => {
+app.listen(port, () => {
   console.log("Server is listening on port " + port);
 })
