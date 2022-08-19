@@ -1,6 +1,9 @@
-.background {
-  background: orange;
-}
+@import "../../vars.scss";
+
+// .light-color {
+//   background: $background-color;
+// }
+
 
 .content {
   height: calc(100vh - 98px);
@@ -11,7 +14,10 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  background-image: url("https://i.imgur.com/VSjNm16.jpg");
+  // background-image: url("https://i.imgur.com/VSjNm16.jpg");
+  // background-image: url("https://i.imgur.com/X6Qoe5G.jpg");
+  background-image: url("https://images.unsplash.com/photo-1588655094662-d6461b53045b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
+
   background-attachment: fixed;
   background-color: #cccccc;
   background-repeat: no-repeat;
@@ -28,7 +34,7 @@
   font-size: 2rem;
   color: black;
   font-weight: 550;
-  padding-bottom: 350px;
+  padding-bottom: 450px;
   padding-right: 9px;
   line-height: 55px;
   font-family: 'Poppins', sans-serif;
