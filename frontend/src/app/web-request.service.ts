@@ -9,7 +9,7 @@ export class WebRequestService {
   readonly ROOT_URL;
 
   constructor(private http: HttpClient) {
-    this.ROOT_URL = "https://micahbessolo.com:3010";
+    this.ROOT_URL = "https://api.micahbessolo.com:3010";
     // this.ROOT_URL = "https://44.227.132.21:3010";
     // this.ROOT_URL = "http://0.0.0.0:3010";
   }
