@@ -2,11 +2,13 @@ import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout';
 
+
 @Component({
   selector: 'menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
+
 export class MenuComponent {
 
   @ViewChild(MatSidenav)
@@ -29,5 +31,4 @@ export class MenuComponent {
     });
   }
    title = 'menu';
-
 }

@@ -7,10 +7,10 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SkillsComponent } from './skills/skills.component';
 
 const routes: Routes = [
-  { path: 'skills', component: SkillsComponent },
-  { path: '', component: HomeComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'portfolio', component: PortfolioComponent },
+  { path: '', component: HomeComponent},
+  { path: 'skills', component: SkillsComponent},
+  { path: 'portfolio', component: PortfolioComponent},
+  { path: 'contact', component: ContactComponent},
   { path: 'contact-success', component: ContactSuccessComponent }
 ];
 

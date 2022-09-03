@@ -23,10 +23,9 @@
 
 @media only screen and (max-width: 800px) {
   .content {
-    // margin-left: 16px;
     margin: 0px;
     border-radius: 0px;
-    height: 91vh;
+    height: 92.25vh;
     overflow-y: hidden;
   }
   .right {
@@ -79,7 +78,6 @@
 
 .right {
   position: absolute;
-  // right: 15vw;
   left: 68%;
   font-size: 17px;
   line-height: 1.4;
@@ -100,7 +98,7 @@
 
   .right {
     font-size: 16px;
-    top: 25%;
+    // top: 25%;
   }
 }
 
