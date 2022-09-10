@@ -1,7 +1,7 @@
 @import "../../vars.scss";
 
 .content {
-  height: calc(100vh - 98px);
+  height: calc(100vh - 99px);
   margin: 16px;
   margin-left: 32px;
   display: flex;
@@ -10,22 +10,25 @@
   border-radius: 10px;
   column-count: 2;
   text-align: left;
-  background: linear-gradient(
-    to right,
-    $skill-left 0%,
-    $skill-left 65%,
-    $skill-right 65%,
-    $skill-right 100%
-  )
 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  // forrest road
+  // background-image: url(https://images.unsplash.com/photo-1424746219973-8fe3bd07d8e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+  // background-size: cover;
+  // background-position: center;
+
+  background: $skills-background;
 }
-
 
 @media only screen and (max-width: 800px) {
   .content {
+    // margin-left: 16px;
     margin: 0px;
     border-radius: 0px;
-    height: 92.25vh;
+    height: calc(100vh - 67.2px);
+    overflow-y: hidden;
     overflow-y: hidden;
   }
   .right {
@@ -33,38 +36,58 @@
   }
 }
 
-// keeps right from crossing linear-gradient line
-@media only screen and (min-width: 1865px) {
-  .right {
-    padding-left: 100px;
-  }
-}
-@media only screen and (min-width: 2500px) {
-  .right {
-    padding-left: 200px;
+// shrink font size when smaller
+@media only screen and (max-width: 400px) {
+  .title {
+    font-size: 22px;
   }
 }
 
+@media only screen and (max-width: 576px) {
+  .right {
+    max-height: 700px;
+  }
+}
+
+.list {
+  float: inline;
+}
+
 .container {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 4px;
   padding-right: 30px;
   padding-left: 30px;
   position: relative;
   max-height: calc(100vh - 98px);
-  // overflow-y: scroll;
-  // background: red;
+  // max-width: 1500px;
+}
+
+.profile {
+  clip-path: circle();
+  max-width: 315px;
 }
 
 .title {
   text-align: center;
-  font-size: 24px;
+  font-size: 26px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
 }
 
+.full-left {
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+  position: relative;
+}
+
 .left {
+  background: $skills-bubble;
+  // background: #ede1d6;
+  max-width: 315px;
+  border-radius: 15px;
+  overflow-y: auto;
+}
+
+.right {
   position: relative;
   padding-top: 18px;
   padding-left: 9px;
@@ -74,32 +97,49 @@
   font-size: 17px;
   line-height: 1.40;
   font-family: 'Poppins', sans-serif;
+  background: $skills-bubble;
+  max-width: 471px;
+  border-radius: 15px;
 }
 
-.right {
-  position: absolute;
-  left: 68%;
-  font-size: 17px;
-  line-height: 1.4;
-  margin-top: 0;
+.backend {
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-left: 10px;
+  padding-bottom: -10px;
+  margin-bottom: -3px;
+}
+
+.frontend {
+  padding-bottom: -5px;
+  margin-bottom: 0px;
+  padding-left: 10px;
+}
+
+.frontendTitle {
+  padding-bottom: -10px;
+  margin-bottom: -10px;
+}
+
+.other {
+  padding-bottom: -9px;
+  padding-left: 10px;
+}
+
+.otherTitle {
+  padding-bottom: -10px;
+  margin-bottom: -10px;
+}
+
+li {
   font-family: 'Poppins', sans-serif;
+  font-size: 17px;
 }
 
-// shrink font size when smaller
-@media only screen and (max-width: 400px) {
-  .title {
-    font-size: 22px;
-  }
-
-  .left {
-    padding-top: 7px;
-    font-size: 16px;
-  }
-
-  .right {
-    font-size: 16px;
-    // top: 25%;
-  }
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 19px;
+  font-weight: bolder;
 }
 
 ul {

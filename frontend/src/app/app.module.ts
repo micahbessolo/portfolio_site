@@ -8,7 +8,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
-import { MenuComponent } from './menu/menu.component';
 import { SkillsComponent } from './skills/skills.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -19,11 +18,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContactSuccessComponent } from './contact-success/contact-success.component';
 
 // animations
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
     SkillsComponent,
     HomeComponent,
     ContactComponent,
@@ -34,6 +33,7 @@ import { ContactSuccessComponent } from './contact-success/contact-success.compo
     BrowserModule,
     RouterModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
     MatButtonModule,

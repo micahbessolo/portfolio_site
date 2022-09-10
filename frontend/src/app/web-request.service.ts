@@ -9,7 +9,6 @@ export class WebRequestService {
   readonly ROOT_URL;
 
   constructor(private http: HttpClient) {
-    // if in development, change below to http://localhost:3000
     this.ROOT_URL = "https://api.micahbessolo.com";
     // this.ROOT_URL = "http://localhost:3010";
   }
