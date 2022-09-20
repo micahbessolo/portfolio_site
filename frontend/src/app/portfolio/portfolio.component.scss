@@ -1,173 +1,51 @@
 @import "../../vars.scss";
 
 .content {
-  height: calc(100vh - 99px);
-  margin: 16px;
-  margin-left: 32px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  overflow: hidden;
-  border-radius: 10px;
-  background-attachment: fixed;
-  background: $portfolio-background !important;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media only screen and (max-width: 800px) {
-  .content {
-    margin: 0px;
-    border-radius: 0px;
-    height: calc(100vh - 67.2px);
-    overflow-y: hidden;
-  }
-  .tab-content{
-    margin-top: 33px;
-  }
-}
-
-.nav {
-  position: absolute;
-  top: 16px;
-  background: #cccccc;
-  width: 300px;
-}
-
-.nav-link {
-  background: lightgrey;
-}
-
-.tab-content {
-  position: relative;
-  justify-content: center;
-  background: white;
-  height: 100%;
   overflow-y: scroll;
-  border-radius: 5px;
-  margin-left: 16px;
-  margin-right: 16px;
-  top: 54px;
-  bottom: 20px;
-  margin-bottom: 32px;
-}
+  overflow-x: hidden;
 
-.tab-pane {
-  max-width: 1000px;
-}
-
-// temporary setting
-.proj2 {
-  width: 1000px;
-}
-
-.accordion-header {
-  height: 50px;
-}
-
-h4 {
-  text-align: left;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1em;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-family: 'Poppins', sans-serif;
-}
-
-.tab-pane ul li {
-  font-size: 15px;
-  line-height: 2rem;
-  text-align: left;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-family: 'Poppins', sans-serif;
-}
-
-.otherFront li {
-  font-size: 15px;
-  line-height: 2rem;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-family: 'Poppins', sans-serif;
-}
-
-p {
-  text-align: left;
-  font-size: 16px;
-  padding-top: 15px;
-  padding-left: 15px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-family: 'Poppins', sans-serif;
-}
-
-.tab-pane ul {
-  margin-bottom: 0px;
-}
-
-@media screen and (max-width: 376px) {
-  .tab-pane ul li {
-    line-height: 1.50rem;
-  }
-  .mat-elevation-z4 {
-    box-shadow: none !important;
-  }
-}
-
-.backendLi {
-  padding-left: 45px;
-}
-
-.other {
-  text-align: left;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 2em;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-family: 'Poppins', sans-serif;
-}
-
-.otherFront {
-  padding-left: 60px;
-  padding-top: 0px;
-}
-
-.title {
-  padding-top: 15px;
-}
-
-.imgTitle {
-  text-align: center;
-  font-size: 15px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-family: 'Poppins', sans-serif;
-}
-
-label {
-  font-size: 15px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-family: 'Poppins', sans-serif;
-}
-
-.text {
-  display: block;
 }
 
 .container {
-  width: 100%;
+  position: relative;
+  top: 0px;
+  left: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  // background-color: red;
+  margin-bottom: 15px;
 }
 
-img {
-  max-height: 350px;
-}
+@media only screen and (max-width: 800px) {
+  .tab-content{
+    margin-top: 10px;
 
-@media only screen and (max-width: 768px) {
-  img {
-    // display: none;
   }
-  .imgTitle {
-    // display: none;
+  .container {
+    left: -5px;
   }
 }
 
-.nav-tabs {
-  margin-bottom: 0;
+@media only screen and (max-width: 440px){
+  .card {
+    padding: 0px;
+    margin: 0px;
+    background-size: cover;
+  }
+  .container {
+    left: -12px;
+  }
 }
 
+.card {
+  margin: 0 auto;
+  border-radius: 10px;
+  max-width: 100vw !important;
+  width: 33rem;
+}
+
+.card img {
+  border-radius: 10px;
+}
