@@ -38,6 +38,9 @@
   </mat-toolbar>
 </nav>
 
+<div *ngIf="loaderService.isLoading | async" class="loader-container">
+  <mat-spinner style="top:50%; left:50%"></mat-spinner>
+</div>
 
 <!--sidebar-->
 <mat-sidenav-container class="sidebar">
@@ -98,23 +101,11 @@
     </div>
   </mat-sidenav>
 
-
-<!--main page-->
-<!-- <mat-sidenav-content [@routeAnimations]="prepareRoute(outlet)">
-  <router-outlet #outlet="outlet"></router-outlet> -->
-
 <mat-sidenav-content>
   <div>
     <main [@routeAnimations]="prepareRoute(outlet)" class="content">
       <router-outlet #outlet="outlet"></router-outlet>
     </main>
   </div>
-  <!-- <app-home></app-home>
-  <app-skills></app-skills>
-  <portfolio></portfolio>
-  <app-contact></app-contact> -->
 </mat-sidenav-content>
 </mat-sidenav-container>
-
-
-

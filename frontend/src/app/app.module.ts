@@ -14,11 +14,16 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ContactSuccessComponent } from './contact-success/contact-success.component';
 
-// animations
+// animation
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// loading animation
+import { MatProgressBarModule } from  '@angular/material/progress-bar';
+import { InterceptorService } from './loader/interceptor.service';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -39,9 +44,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
-    HttpClientModule
+    HttpClientModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:InterceptorService, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

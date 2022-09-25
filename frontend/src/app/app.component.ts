@@ -5,6 +5,7 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { RouterOutlet } from '@angular/router';
 
 import { slider } from './route-animations'
+import { LoaderService } from './loader/loader.service';
 
 
 @Component({
@@ -17,14 +18,16 @@ import { slider } from './route-animations'
 })
 
 export class AppComponent {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
 
   // for sidenav
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
 
-  constructor(private observer: BreakpointObserver) {
-
-  }
+  constructor(private observer: BreakpointObserver,
+    public loaderService: LoaderService) {  }
 
   ngAfterViewInit(){
 
