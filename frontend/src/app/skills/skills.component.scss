@@ -95,24 +95,6 @@
   transform:scale(1.05);
 }
 
-.backend {
-  padding-top: 0px;
-  padding-left: 10px;
-}
-
-.frontend {
-  padding-left: 10px;
-}
-
-.other {
-  padding-left: 10px;
-}
-
-.rightTitle {
-  padding-bottom: -10px;
-  margin-bottom: -10px;
-}
-
 h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 19px;
@@ -122,6 +104,7 @@ h2 {
 ul {
   list-style-type: none;
   padding-top: 8px;
+  padding-left: 10px;
 }
 
 li {
